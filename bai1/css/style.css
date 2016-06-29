@@ -1,0 +1,45 @@
+body 
+{
+	font-family: "Georgia", "Time New Roman", "Times", "serif";
+	align: center;
+}
+.main
+{
+	height: 820px;
+	margin: auto;
+	width: 500px;
+	border: 1px solid #0033FF;
+}
+.pf_tl
+{	
+	background: url("../title_background.gif");
+	background-repeat: repeat-x;
+	font-size: 25px;
+	font-weight: bold;	
+}
+.pf_img
+{
+	float: left;
+	background-repeat: repeat;
+}
+.pf_if
+{
+	height: 100px;
+	weight: 500px;
+	overflow: scroll;
+}
+.ft_if
+{
+	margin-left: 45px;
+        height: 100px;
+	margin-bottom: 120px;
+}
+.cmt
+{
+	margin-left: 5px;
+        background-color: #ECECEC
+}
+.pt
+{
+	margin-left: 60px;
+}
