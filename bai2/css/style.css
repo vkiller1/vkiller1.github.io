@@ -1,0 +1,113 @@
+﻿body
+{
+	font-family: "Verdana", "Arial", "Helvetica", "Sans-serif";
+	background-color: #2D2F35;
+}
+#main
+{
+	width: 1200px;
+	margin: 0 auto;
+	border: 1px solid #474A51;
+}
+#header
+{
+	background-color: #2D2F35; 
+	border-bottom: 2px solid #474A51;
+	height: 106px;
+}
+#n_header
+{
+	height: 300px;
+	width: 1200px;
+	border-bottom: 2px solid #474A51;
+	background: #2D2F35 url("../bg_home_intro.gif") repeat-x ;
+}
+.info
+{
+	width:400px;
+	height:300px;
+	float:left;
+	margin-left:100px;
+}
+p
+{
+	text-align:justify;
+	color: #FFFFFF;
+	font-size: 14px;
+}
+h2
+{
+	font-size: 18px;
+	color:yellow;
+}
+.img_n_header
+{
+	height: 300px; 
+	width: 500px; 
+	margin-right: 100px;
+	float: right;
+}
+#img
+{
+	background-color: #2D2F35;
+	width:1200px;
+	height:127px;
+	border-bottom: 2px solid #474A51;
+}
+.img_row
+{
+	margin: auto;
+	width: 920px;
+	height: 127px;
+}
+.image
+{
+	position: relative;
+	margin: 15px 5px 10px 5px;
+	width: 220px;
+	height: 102px;
+	float: left;
+}
+#info
+{
+	position: relative;
+	background-color: #2D2F35;
+	border-bottom: 2px solid #474A51;
+	width: 1200px;
+	height: 300px;
+}
+.info1
+{
+	width: 400px;
+	height: 300px;
+	float: left;
+	margin-left: 100px;
+	background: url("../home_services_bg_design.gif") right bottom no-repeat;
+}
+#footer
+{
+	width: 1200px;
+	height: 75px;
+	margin-top:-10px;
+	background: #24262A url("../bg_footer.gif") center center no-repeat;
+}
+
+.info2
+{
+	width: 400px;
+	height: 300px;
+	float: right;
+	margin-right: 100px;
+	background: url("../home_services_bg_marketing.gif") top left no-repeat;
+}
+.number_icon
+{
+	top: 0px;
+	right: 0px;
+	position: absolute;
+}
+.font
+{
+	text-align: center;
+	font-size: 10px;
+}
