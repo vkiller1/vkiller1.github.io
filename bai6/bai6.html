@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Bai 6 </title>
+
+<link href="css/style.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+
+<div class="main">
+	<div id="leftpart">
+		<div id="news">
+			<div class="news_container">
+				<h4 class="news_title">DAILY CELEBRITY GOSSIP</h4>
+				<div class="news_1">
+					<img class="news_img" src="image/img-1.png" alt="">
+					<div id="news_more_1"><span class="more_text"><a href="google.com">MORE</a></span></div>
+					<div class="news_text">
+						<h5>+ RUSSELL CROWE + MORE ...</h5>
+						<p style=" font-size: 10px">RUSSELL Crowe's son to marry  Keith & Nicole's daughter, plus Renee Zellweger reveals her breast cancer scare</p>
+					</div>
+				</div>
+			</div>
+			<div class="news_container">
+				<h4 class="news_title">DAILY CELEBRITY PICS</h4>
+				<div class="news">
+					<img class="news_img" src="image/img-2.png" alt="">
+					<div id="news_more_2"><span class="more_text"><a href="google.com">MORE</a></span></div>
+					<div class="news_text">
+						<h5>+ BECKHAMS, CLAUDIA CHIFFER ...</h5>
+						<p style=" font-size: 10px" >VICTORIA and David Beckham dine out in NY, as top model Claudia Schiffer and Eva Herzigova hit the shops in Milan.</p>
+					</div>
+				</div>
+			</div>
+			<div id="news_footer"></div>
+		</div>
+		<div id="movies">
+			<div id="movies_container">
+				<h4 id="movies_title">TOP 3 MOVIE TRAILERS</h4>
+				<div id="movies_content">
+					<div class="movies_trailer" onclick="show(0)"><p class="movies_menu">The House Bunny (M)</p><img class="movies_img" src="image/right.png" alt=""></div>
+						<div class="movies_trailer_infor" style="display: block;">
+							<img src="image/img-3.jpg" alt="">
+							<p>When Playboy bunny Shelly is tossed out of the mansion, she falls in with the sorority girls from Zeta Alpha Zeta.</p>
+							<div class="watch_blue_content">
+								<img src="image/film.png" alt="">
+								<p> <a href="google.com"> Watch Now </a> </p>
+							</div>
+						</div>
+					<div class="movies_trailer" onclick="show(1)"><p class="movies_menu">  Eagle Eye (M) </p> <img class="movies_img" src="image/right.png" alt=""></div>
+					<div class="movies_trailer" onclick="show(2)"><p class="movies_menu">Journey To The Centre Of The Earth(PG)</p><img class="movies_img" src="image/right.png" alt=""></div>
+				</div>
+				<div id="movies_trailer_watch"><img id="movies_trailer_img" src="image/now-showing-icon.gif" alt="Movie Trailer"><span id="movies_trailer_menu">Now Showing</span>
+					<select id="select">
+						<option value="">Select Movie</option>
+					</select>
+				</div>
+			</div>
+			<div id="trailer">
+				<div class="trailer_container">
+					<h4 class="trailer_title">MOVIE PREVIEWS</h4>
+					<div class="trailer_content">
+						<h5> <a href="google.com"> Eagle Eye </a> </h5><div id="trailer_sprites_1"></div>
+						<div class="trailer_text">
+							<div class="trailer_text_left">
+								<img src="image/img-5.jpg" alt="Trailer Title"><br/>
+								<div class="watch">
+									<img src="image/film.png" alt="Trailer">
+									<p> <a href="google.com"> View Trailer </a> </p>
+								</div>
+							</div>
+							<p>SHIA LaBeouf hits the ground running in Eagle eye, an againts the clock conspiracy thriller with a timely technological...</p>
+						</div>
+					</div>
+					<div id="trailer_content">
+						<h5> <a href="google.com"> House Bunny </a> </h5><div id="trailer_sprites_2"></div>
+						<div class="trailer_text">
+							<div class="trailer_text_left">
+								<img src="image/img-4.jpg" alt="Trailer Title"><br/>
+								<div class="watch">
+									<img src="image/film.png" alt="Trailer">
+									<p> <a href="google.com"> View Trailer </a> </p>
+								</div>
+							</div>
+							<p>IF YOU left Legally Blonde and Revenge of the Nerds DVDs in a darkened room for long enough, something like the House Bun</p>
+						</div>
+					</div>
+					<div id="trailer_footer">
+						<img id="trailer_footer_img" src="image/clock.png" alt="Clock"><p id="trailer_footer_watch"> <a href="google.com"> Local Cinema listings </a> </p><p id="trailer_footer_p">+ MORE MOVIES</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="search">
+		<img src="image/Entertainment.gif" alt="Entertainment"><br/>
+		<input id="s_textbox" type="text">
+		<input id="s_button" type="button" value="SEARCH">
+	</div>
+	<div class="content_2">
+		<div class="content_2_item">
+			<img src="image/phone.png" alt="Phone"/>
+			<p>News on your mobile</p>
+		</div>
+		<div class="content_2_item">
+			<img src="image/rss.png" alt="RSS"/>
+			<p>RSS feeds</p>
+		</div>
+		<div class="content_2_item">
+			<img src="image/mail.png" alt="Letter"/>
+			<p>Newsletters</p>
+		</div>
+		<div class="content_2_item">
+			<img src="image/imo.png" alt="Story"/>
+			<p>Send your news stories</p>
+		</div>
+		<div class="content_2_item">
+			<img src="image/camera.png" alt="Camera"/>
+			<p>Send your news photos</p>
+		</div>
+	</div>
+	<div class="footer">
+		<div id="footer_right">
+			<p><a href="google.com">Back to top</a></p>
+		</div>
+		<div id="footer_left">
+			<p><a href="google.com">Help</a> | 
+			<a href="google.com">Contact us</a> | 
+			<a href="google.com">Advertise with us</a> | 
+			<a href="google.com">Job Opportunities </a> | 
+			<a href="google.com">Terms and Conditions</a> | 
+			<a href="google.com">Privacy Policy</a> | 
+			<a href="google.com">Accessibility</a> | 
+			<a href="google.com">Sitemap</a> | 
+			<a href="google.com">News Headlines from our Parterna</a></p>
+		</div>
+		<div id="footer_end">
+			<p>Copyright 2008 News Limited. All times AEST (GMT + 10)</p>
+		</div>
+	</div>
+</div>
+</body>
