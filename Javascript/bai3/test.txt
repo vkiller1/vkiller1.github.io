@@ -1,0 +1,39 @@
+﻿<html>
+<title></title>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<script>
+
+var x = 1;
+function Slideshow(){
+    document.getElementById("img").src="images/image"+x+".jpg";
+    x++;
+    if (x > 3)
+        x = 1;
+}
+
+document.getElementById ("button-click").addEventListener ("click", Slideshow, false);
+
+</script>
+</head>
+<body>
+
+<div id="homepage_title">
+    <h1>Slideshow</h1>
+</div>
+
+<div id="slideshow_wrapper">
+    <div id="image">
+        <img id="img" src="images/image1.jpg" />
+    </div>
+
+    <div id="slideshow_button_right">
+        <button id="button-click" type="button">Next</button>
+    </div>
+
+</div>
+
+
+</body>
+</html>
