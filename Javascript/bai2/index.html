@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script type="text/javascript" src="js/calendar.js"></script>
+<script type="text/javascript" src="js/form.js"></script>
+<link href="css/style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<form id="form_info" method="post" accept-charset="utf-8" action="">
+<table>
+	<tr> 
+	<td><label>Username: </label></td>
+	<td><input type="text" id="userName" name="userName" placeholder="Nhap ten" class="input-text" onblur="validateUsername()" /></td>
+	<td><label id="error_user" class="error"></label> </td> 
+	</tr>
+
+	<tr>
+	<td><label>Password: </label></td>
+	<td><input type="password" id="passWord" name="passWord" placeholder="Nhap mat khau" class="input-text" onblur="validatePassword()"/></td>
+	<td><label id="error_password" class="error"></label> </td> 
+	</tr>
+
+	<tr>
+	<td><label>Email: </label></td>
+	<td><input type="textEmail" id="email" name="email" placeholder="Nhap email" class="input-text" onblur="validateEmail()" /></td>
+	<td><label id="error_email" class="error"></label></td>  
+	</tr>
+
+	<tr>
+	<td><label>Birthday: </label></td>
+	<td><input type = "text"  readonly id = "inputCalendar" placeholder="Nhap ngay sinh"  class="calendar" onclick="show()" class="input-text"/></td> 
+	<div id="abc"> </div>
+	</tr>
+
+	<td></td>
+	<td>
+	<input type="button" name="submit_form"  value="Submit"  onclick="submitAjax();">
+	<input type="button" name="reset_form" value="Reset" onclick="this.form.reset();">
+	</td>
+	<tr><div id="demo"></div></tr>
+</table>
+</form>	
+</body>
+</html>
