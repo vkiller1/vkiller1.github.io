@@ -439,7 +439,7 @@ content.addEventListener("click", function(e) {
 		clickMonster(monster8, locaX, locaY);
 	}
 	
-	if((locaY > 0 && locaY < 40) && ((locaX > 380 && locaX < 420) || (locaX > 417 && locaX < 457) || (locaX > 454 && locaX < 494))) {
+	if ((locaY > 0 && locaY < 40) &&  (locaX > 454 && locaX < 494)) {
 		star_number++;
 		getBoom();
 		}
