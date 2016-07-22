@@ -464,13 +464,11 @@ content.addEventListener("click", function(e) {
 	if(monster8.show) {
 		clickMonster(monster8, locaX, locaY);
 	}
-<<<<<<< HEAD
 
 	if((locaY > 0 && locaY < 40) &&  (locaX > 454 && locaX < 494)) {
 =======
 	
 	if ((locaY > 0 && locaY < 40) &&  (locaX > 454 && locaX < 494)) {
->>>>>>> 9e840f53e9cbecac08cb326bd483e99becc15c30
 		star_number++;
 		getBoom();
 		}
