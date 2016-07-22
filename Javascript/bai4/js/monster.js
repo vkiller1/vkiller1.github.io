@@ -466,7 +466,6 @@ content.addEventListener("click", function(e) {
 	}
 
 	if((locaY > 0 && locaY < 40) &&  (locaX > 454 && locaX < 494)) {
-	
 	if ((locaY > 0 && locaY < 40) &&  (locaX > 454 && locaX < 494)) {
 		star_number++;
 		getBoom();
