@@ -111,6 +111,8 @@ function submitAjax() {
 
 		  var http = new XMLHttpRequest();
 		  var url = "server.php";
+		  
+		  //get param save id info
 			var params = "username="+userName.value+"&pass="+passWord+"&email="+email.value+"&calendar="+inputCalendar;
 			http.open("POST", url, true);
 

@@ -30,7 +30,7 @@ function createDayName() {
 
 }
 
-//show date 
+//get date form
 function getDate(date) {
 	inputCalendar.value = date + "/" + (month + 1) + "/" + year;
 	abc.style.display = 'none';
@@ -73,14 +73,14 @@ function preYear() {
 	show();
 }
 
-//change month calendar when click drop down list
+//change month calendar in dropdown list
 
 function changeMonth() {
 	month = parseInt(document.getElementById("testMonth").value);
 	show();
 }
 
-//change month calendar when click drop down list
+//change year calendar in dropdown list
 
 function changeYear() {
 	year = parseInt(document.getElementById("testYear").value);

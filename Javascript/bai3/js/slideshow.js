@@ -6,6 +6,7 @@ var prev, next;
 var currentPostion = 0;
 var currentImage = 0;
 
+//get param slider
 
 function init(){
 	ul = document.getElementById('image_slider');
@@ -42,6 +43,8 @@ function animate(opts){
 	//return id;
 }
 
+//get motion next image current
+
 function slideTo(imageToGo){
 	var direction;
 	var numOfImageToGo = Math.abs(imageToGo - currentImage);
@@ -60,6 +63,8 @@ function slideTo(imageToGo){
 	animate(opts);
 }
 
+// get onclick pre
+
 function onClickPrev(){
 	if (currentImage == 0){
 		slideTo(imageNumber - 1);
@@ -69,6 +74,8 @@ function onClickPrev(){
 	}		
 }
 
+// get onclick next
+
 function onClickNext(){
 	if (currentImage == imageNumber - 1){
 		slideTo(0);
@@ -77,6 +84,8 @@ function onClickNext(){
 		slideTo(currentImage + 1);
 	}		
 }
+
+// get onclick image number
 
 function generatePager(imageNumber){	
 	var pageNumber;
