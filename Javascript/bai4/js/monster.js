@@ -466,12 +466,9 @@ content.addEventListener("click", function(e) {
 	}
 
 	if((locaY > 0 && locaY < 40) &&  (locaX > 454 && locaX < 494)) {
-<<<<<<< HEAD
-=======
-	if ((locaY > 0 && locaY < 40) &&  (locaX > 454 && locaX < 494)) {
->>>>>>> db4e3744a1c59b133cfc8748a8bece212df542d9
-		star_number++;
-		getBoom();
+		if ((locaY > 0 && locaY < 40) &&  (locaX > 454 && locaX < 494)) {
+			star_number++;
+			getBoom();
 		}
 }
 },true);
