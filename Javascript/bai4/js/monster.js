@@ -358,7 +358,6 @@ function updateMonster(monster){
 //use case get level in game
 
 function getLevel(){
-	
 	var level = Math.floor(score/100);
 	switch(level){
 		case 1: speed = 1;
@@ -470,6 +469,7 @@ content.addEventListener("click", function(e) {
 			star_number++;
 			getBoom();
 		}
+	}
 }
 },true);
 
