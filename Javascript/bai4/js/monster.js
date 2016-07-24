@@ -470,7 +470,6 @@ content.addEventListener("click", function(e) {
 			getBoom();
 		}
 	}
-}
 },true);
 
 // get click boom
