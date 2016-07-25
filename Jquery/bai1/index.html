@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CalendarView — JavaScript Calendar Widget</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/calendar.js"></script>
+	<script type="text/javascript" src="js/jquery.1.4.2.js"></script>
+
+<script type="text/javascript">
+	window.onload = function(){
+		new JsDatePick({
+			useMode:2,
+			target:"inputField",
+			dateFormat:"%d-%M-%Y"
+		});
+	};
+</script>
+
+</head>
+<body>
+	<h2></h2>
+	    <input type="text" size="12" id="inputField" />
+   
+
+</body>
+</html>
