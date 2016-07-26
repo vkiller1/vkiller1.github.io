@@ -42,6 +42,6 @@ function validate(field, query) {
 			document.getElementById(field).innerHTML = "Error Occurred. <a href='index.html'>Reload Or Try Again</a> the page.";
 		}
 	}
-	xmlhttp.open("GET", "validation.php?field=" + field + "&query=" + query, true);
+	xmlhttp.open("GET", "validation.php?field=" + field + "&query=" + query, false);
 	xmlhttp.send();
 }
