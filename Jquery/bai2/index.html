@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="css/form.css" rel="stylesheet" type="text/css">
+<link href="css/style.css"rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.1.4.2.js"></script>
+<script type="text/javascript" src="js/calendar.js"></script>
+<script src="js/script.js"></script>
+<script type="text/javascript">
+	window.onload = function(){
+		new JsDatePick({
+			useMode:2,
+			target:"birthday1",
+			dateFormat:"%d-%M-%Y"
+		});
+	};
+</script>
+</head>
+<body>
+<div id="mainform">
+	<div class="innerdiv">
+		<form action='#' id="myForm" method='post' name="myForm">
+		<h3>Fill Your Information!</h3>
+		<table>
+		<tr>
+		<td>Username</td>
+		<td><input id='username1' name='username' onblur="validate('username', this.value)" type='text'></td>
+		<td>
+		<div id='username'></div>
+		</td>
+		</tr>
+		<tr>
+		<td>Password</td>
+		<td><input id='password1' name='password' onblur="validate('password', this.value)" type='password'></td>
+		<td>
+		<div id='password'></div>
+		</td>
+		</tr>
+		<tr>
+		<td>Email</td>
+		<td><input id='email1' name='email' onblur="validate('email', this.value)" type='text'></td>
+		<td>
+		<div id='email'></div>
+		</td>
+		</tr>
+		<tr>
+		<td>birthday</td>
+		<td><input id='birthday1' name='birthday' onblur="validate('birthday', this.value)" type='text'></td>
+		<td>
+		<div id='birthday'></div>
+		</td>
+		</tr>
+		</table>
+	<input onclick="checkForm()" type='button' value='Submit'>
+</form>
+</div>
+</body>
+</html>
