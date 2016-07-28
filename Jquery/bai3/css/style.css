@@ -1,0 +1,51 @@
+﻿div {
+	width: 800px;
+	margin: 0px auto;
+	height: 200px;
+	border: 2px solid #ccc;
+	position: relative;
+	padding: 5px;
+}
+img {
+	width: 800px;
+	height: 200px;
+}
+#next{
+	text-transform: uppercase;
+	position: absolute;
+	top: 100px;
+	right: 10px;
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+	background: url("../image/next.png");
+}
+#prev{
+	text-transform: uppercase;
+	position: absolute;
+	top: 100px;
+	left: 10px;
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+	background: url("../image/prev.png");
+}
+ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	left: 350px;
+	bottom: 15px;
+}
+ul li{
+	display: inline;
+	background: orange;
+	padding: 6px;
+	border-radius: 10px;
+	font-weight: bold;
+}
+ul li.active{
+	background: red;
+	color: yellow;
+}
