@@ -2,7 +2,6 @@ window.onload = function(){
 
 	content = document.getElementById("canvas_content");
 	context = content.getContext("2d");
-	
 	footer = document.getElementById("canvas_footer");
 	contextFooter = footer.getContext("2d");
 	speed = 1;
@@ -15,47 +14,35 @@ window.onload = function(){
 	boom_number = 3;
 	blood_list = [];
 	windows = window;
-	
 	requestAnimationFrame = windows.requestAnimationFrame ||
 							windows.webkitRequestAnimationFrame ||
 							windows.msRequestAnimationFrame ||
 							windows.oRequestAnimationFrame ||
 							windows.mozRequestAnimationFrame;
-							
 	var runRequestAnimation;
-
-
-
 // save storge the highscore
 	if(sessionStorage.getItem("highscore") == null) {
 		sessionStorage.setItem("highscore",0);
 	} else {
 		highScore = sessionStorage.getItem("highscore");
 	}
-	
 	background = new Image();
 	background_ready = false;
 	background.onload = function() {
 	background_ready = true;
 }
 	background.src = "images/background.jpg";
-
 //get image footer
 	footer_image = new Image();
 	footer_ready = true;
-	footer_image.onload = function() {
-
-}
 	footer_image.src = "images/footer.png";
 //get image monster
-
 	monster = new Image();
 	monster_ready = false;
 	monster.onload = function() {
 	monster_ready = true;	
 }
 monster.src = "images/monster2.png";
-
 //get image star
 	star = new Image();
 	star_ready = false;
@@ -63,16 +50,13 @@ monster.src = "images/monster2.png";
 	star_ready = true;
 }
 star.src = "images/star.png";	
-
 // get image boom
-
 	boom = new Image();
 	boom_ready = false;
 	boom.onload = function() {
 	boom_ready = true;
 }
 	boom.src = "images/boom.jpg";
-
 //get image blood
 	blood = new Image();
 	blood_ready = false;
@@ -80,7 +64,6 @@ star.src = "images/star.png";
 	blood_ready = true;
 }
 blood.src = "images/blood.png";
-
 // get image pause
 	pause = new Image();
 	pause_ready = false;
@@ -88,7 +71,6 @@ blood.src = "images/blood.png";
 	pause_ready = true;
 }
 	pause.src = "images/pause1.png";
-
 //get image reset
 	reset = new Image();
 	reset_ready = false;
@@ -96,12 +78,9 @@ blood.src = "images/blood.png";
 	reset_ready = true;
 }
 	reset.src = "images/restart.png";
-	
 	pauseContent = new Image();
 	pauseContent.src = "images/pause1.png";
-	
 // get motion animation
-
 	monster1 = { beginX: 0, beginY: 0, endX: 100, endY: 100, startX: 0, startY: 0, stopX: 100, stopY: 100,
 				 speed: speed, click: false, show: true, dieX: 0, dieY:0
 }
@@ -126,9 +105,7 @@ blood.src = "images/blood.png";
 	monster8 = { beginX: 0, beginY: 170, endX: 90, endY: 170, startX: 0, startY: 170, stopX: 90, stopY: 170,
 				 speed: speed, click: false, show: false, dieX: 0, dieY:0
 }
-
 // get blood while monster die
-
 function monsterDie(x,y){
 	bloodDie = {x:x, y:y};
 	blood_list[blood_list.length] = bloodDie;
@@ -136,25 +113,19 @@ function monsterDie(x,y){
 		blood_list.splice(0,1);
 	}
 }
-
 // draw game display
-
 function drawMotion() {
 	if(background_ready){
 		context.drawImage(background,0,0);
 	}
-
 // draw blood vector(x,y)
-
 	if(blood_ready){
 	for(var i = 0; i < blood_list.length; i++)
 		if(blood_list.length > 0) {
 			context.drawImage(blood, blood_list[i].x, blood_list[i].y, 80, 80);
 		}
 	}
-
 // draw monster vector(x,y)
-	
 	if(monster_ready) {
 		if(monster1.show) {
 			context.drawImage(monster, monster1.startX, monster1.startY, 80, 80);
@@ -181,15 +152,11 @@ function drawMotion() {
 			context.drawImage(monster, monster8.startX, monster8.startY, 80, 80);
 		}
 	}
-	
 // draw footer
-	
 	if(footer_ready){ 
 		contextFooter.drawImage(footer_image,0,0,500,130);
 	}
-	
 // draw pause in footer
-
 	if(pause_ready){
 		contextFooter.drawImage(pause, 20, 15, 50, 50);
 	}
@@ -199,13 +166,10 @@ function drawMotion() {
 		    context.drawImage(boom,b,0,40,40);	
 		}
 	}
-
 // draw reset in footer
-
 	if(reset_ready){ 
 		contextFooter.drawImage(reset, 90, 15, 50, 50);	
 	}
-
 // draw star in footer
 	if(star_ready){
 		var h = 20;
@@ -214,7 +178,6 @@ function drawMotion() {
 			h += 50;
 		}
 	}
-
 // draw highScore
 	contextFooter.beginPath();
 	contextFooter.fillStyle = "white";
@@ -225,9 +188,7 @@ function drawMotion() {
 	contextFooter.fillStyle = "blue"
 	contextFooter.font = "bold 20px Arial";
 	contextFooter.fillText("Highscore: " + highscore, 325, 67);
-	
 //draw score
-	
 	contextFooter.beginPath();
 	contextFooter.fillStyle = "white";
 	contextFooter.rect(320, 6, 150, 30);
@@ -243,9 +204,7 @@ function drawMotion() {
 			pause_ready = false;
 	}
 }
-
 // refresh monster
-
 function refresh(monster) {
 	monster.show = false;
 	monster.startX = monster.beginX;
@@ -254,7 +213,6 @@ function refresh(monster) {
 	monster.stopY = monster.endY;
 	monster.speed = speed;
 }
-
 // random display monster
 function random(){
 	if(!monster1.show) {
@@ -281,7 +239,6 @@ function random(){
 	if(!monster8.show){
 		refresh(monster8);
 	}
-	
 	var abc = Math.floor((Math.random()*8)+1);
 	switch (abc){
 		case 1: 
@@ -320,9 +277,7 @@ function random(){
 			break;
 	} 
 }
-
 // update monster while kill
-
 function updateMonster(monster){
 	monster.click = true;
 	if(monster.startX > monster.stopX){
@@ -330,13 +285,11 @@ function updateMonster(monster){
 	} else if(monster.startX < monster.stopY) {
 			monster.startX += monster.speed;
 	}
-	
 	if(monster.startY > monster.stopY){
 			monster.startY-= monster.speed;
 	} else if(monster.startY < monster.stopY) {
 			monster.startY+= monster.speed;
 	}
-	
 	if(monster.startX == monster.stopX && monster.startY == monster.stopY){
 		monster.startX = monster.stopX;
 		monster.startY = monster.stopY;
@@ -354,9 +307,7 @@ function updateMonster(monster){
 		random();
 	}
 }
-
 //use case get level in game
-
 function getLevel(){
 	var level = Math.floor(score/100);
 	switch(level){
@@ -383,9 +334,7 @@ function getLevel(){
 				break;
 	}
 }
-
 // get reset
-
 function restart(){
 	refresh(monster1);
 	refresh(monster2);
@@ -411,9 +360,7 @@ function restart(){
 	monster1.show = true;
 	main();
 }
-
 // get monster after kill
-
 function clickMonster(monster, x, y) {
 	if(monster.click) {
 		if(x >= monster.startX && x <= monster.startX + 110 && y >= monster.startY && y <= monster.startY + 110 ) {
@@ -434,7 +381,6 @@ function clickMonster(monster, x, y) {
 	}
 }
 // get click monster
-
 content.addEventListener("click", function(e) {
 	locaX = e.pageX - this.offsetLeft;
 	locaY = e.pageY - this.offsetTop;
@@ -463,7 +409,6 @@ content.addEventListener("click", function(e) {
 	if(monster8.show) {
 		clickMonster(monster8, locaX, locaY);
 	}
-
 	if((locaY > 0 && locaY < 40) &&  (locaX > 454 && locaX < 494)) {
 		if ((locaY > 0 && locaY < 40) &&  (locaX > 454 && locaX < 494)) {
 			star_number++;
@@ -471,9 +416,7 @@ content.addEventListener("click", function(e) {
 		}
 	}
 },true);
-
 // get click boom
-
 function getBoom(){
 	if(boom_ready){
 		//console.log("BOOM");
@@ -484,9 +427,7 @@ function getBoom(){
 			boom_ready = false;
 		}
 	}
-
 // get point after use boom
-
 function executeActionBoom (monster) {
 	if(monster1.show){
 		score += 5;
@@ -500,42 +441,36 @@ function executeActionBoom (monster) {
 		monster2.click = false;
 		monsterDie(monster2.startX, monster2.startY);
 	}
-
 	if (monster3.show) {
 		score += 5;
 		monster3.show = false;
 		monster3.click = false;
 		monsterDie(monster3.startX, monster3.startY);
 	}
-
 	if (monster4.show) {
 		score += 5;
 		monster4.show = false;
 		monster4.click = false;
 		monsterDie(monster4.startX, monster4.startY);
 	}
-
 	if (monster5.show) {
 		score += 5;
 		monster5.show = false;
 		monster5.click = false;
 		monsterDie(monster5.startX, monster5.startY);
 	}
-
 	if (monster6.show) {
 		score += 5;
 		monster6.show = false;
 		monster6.click = false;
 		monsterDie(monster6.startX, monster6.startY);
 	}
-
 	if (monster7.show) {
 		score += 5;
 		monster7.show = false;
 		monster7.click = false;
 		monsterDie(monster7.startX, monster7.startY);
 	}
-
 	if (monster8.show) {
 		score += 5;
 		monster8.show = false;
@@ -548,9 +483,7 @@ function executeActionBoom (monster) {
 		random();
 	}
 }
-
 // get click pause, reset function
-	
 footer.addEventListener("click", function(e) { 
 	locaX = e.pageX - this.offsetLeft;
 	locaY = e.pageY - this.offsetTop;
@@ -561,7 +494,6 @@ footer.addEventListener("click", function(e) {
 		restart();
 	}
 });
-
 // get pause function
 function pauseGame(){
 	if(locaX > 20 && locaX < 70 && locaY >= 15 && locaY <= 65){
@@ -573,9 +505,8 @@ function pauseGame(){
 			boom_ready = true;
 			main();
 		}
+	}
 }
-}
-
 // get main run game
 function main() {
 	getLevel();
@@ -614,23 +545,21 @@ function main() {
 	if(!run){
 		if(!end){
 		context.drawImage(pauseContent, 175, 175, 150, 150);
-	} else if(end){
-		if(score > highscore) {
-			context.fillStyle = "red";
-			context.font = "55px Arial";
-			context.fillText("GAME OVER", 90, 265);
-			highscore = score;
-			sessionStorage.setItem("highscore", score);
-			context.fillStyle = "yellow";
-			context.font = "30px Arial";
-			context.fillText("NEW HIGH SCORE: " + highscore, 95, 295);
+		} else if(end){
+			if(score > highscore) {
+				context.fillStyle = "red";
+				context.font = "55px Arial";
+				context.fillText("GAME OVER", 90, 265);
+				highscore = score;
+				sessionStorage.setItem("highscore", score);
+				context.fillStyle = "yellow";
+				context.font = "30px Arial";
+				context.fillText("NEW HIGH SCORE: " + highscore, 95, 295);
+			}
 		}
 	}
-	}
 }
-
 main();
-
 }
 
 
