@@ -30,7 +30,7 @@ window.onload = function(){
 	background_ready = false;
 	background.onload = function() {
 	background_ready = true;
-}
+};
 	background.src = "images/background.jpg";
 //get image footer
 	footer_image = new Image();
@@ -41,70 +41,70 @@ window.onload = function(){
 	monster_ready = false;
 	monster.onload = function() {
 	monster_ready = true;	
-}
+};
 monster.src = "images/monster2.png";
 //get image star
 	star = new Image();
 	star_ready = false;
 	star.onload = function() {
 	star_ready = true;
-}
+};
 star.src = "images/star.png";	
 // get image boom
 	boom = new Image();
 	boom_ready = false;
 	boom.onload = function() {
 	boom_ready = true;
-}
+};
 	boom.src = "images/boom.jpg";
 //get image blood
 	blood = new Image();
 	blood_ready = false;
 	blood.onload = function() {
 	blood_ready = true;
-}
+};
 blood.src = "images/blood.png";
 // get image pause
 	pause = new Image();
 	pause_ready = false;
 	pause.onload = function() {
 	pause_ready = true;
-}
+};
 	pause.src = "images/pause1.png";
 //get image reset
 	reset = new Image();
 	reset_ready = false;
 	reset.onload = function() {
 	reset_ready = true;
-}
+};
 	reset.src = "images/restart.png";
 	pauseContent = new Image();
 	pauseContent.src = "images/pause1.png";
 // get motion animation
 	monster1 = { beginX: 0, beginY: 0, endX: 100, endY: 100, startX: 0, startY: 0, stopX: 100, stopY: 100,
 				 speed: speed, click: false, show: true, dieX: 0, dieY:0
-}
+};
 	monster2 = { beginX: 190, beginY: 0, endX: 190, endY: 70, startX: 190, startY: 0, stopX: 190, stopY: 70,
 				 speed: speed,click: false,show: false,dieX: 0,dieY:0
-}
+};
 	monster3 = { beginX: 390, beginY: 0, endX: 280, endY: 80, startX: 390, startY: 0, stopX: 280, stopY: 80,
 				 speed: speed, click: false, show: false, dieX: 0, dieY:0
-}
+};
 	monster4 = { beginX: 390,beginY: 170, endX: 290, endY: 150, startX: 390, startY: 180, stopX: 290, stopY: 150,
 				 speed: speed, click: false, show: false, dieX: 0, dieY:0
-}
+};
 	monster5 = { beginX: 390, beginY: 390, endX: 280, endY: 280, startX: 390, startY: 390, stopX: 280, stopY: 280,
 				 speed: speed, click: false, show: false, dieX: 0, dieY:0
-}
+};
 	monster6 = { beginX: 170,beginY: 390,endX: 170,endY: 300,startX: 170,startY: 390, stopX: 170,stopY: 300,
 				 speed: speed, click: false, show: false, dieX: 0, dieY:0
-}
+};
 	monster7 = { beginX: 0, beginY: 390, endX: 110, endY: 280, startX: 0, startY: 390, stopX: 110, stopY: 280,
 			     speed: speed, click: false, show: false, dieX: 0, dieY:0
-}
+};
 	monster8 = { beginX: 0, beginY: 170, endX: 90, endY: 170, startX: 0, startY: 170, stopX: 90, stopY: 170,
 				 speed: speed, click: false, show: false, dieX: 0, dieY:0
-}
+};
 // get blood while monster die
 function monsterDie(x,y){
 	bloodDie = {x:x, y:y};
