@@ -7,6 +7,13 @@
 			stt = parseInt(($(this).attr("stt")));
 		}
 	});
+	
+	function hideImg(){
+		$("img").hide();
+		$("img").eq(stt).show();
+		$("li").removeClass('active');
+		$("li").eq(stt).addClass('active');
+	}
 	// next image
 	$("#next").click(function(){	
 		next = ++stt;
@@ -36,39 +43,24 @@
 			stt = (endImg+1);
 		}
 		stt= startImg;
-		$("img").hide();
-		$("img").eq(stt).show();
-		$("li").removeClass('active');
-		$("li").eq(stt).addClass('active');
+		hideImg();
   });
   	$("#img_2").click(function(){
 		stt= startImg+1;
-		$("img").hide();
-		$("img").eq(stt).show();
-		$("li").removeClass('active');
-		$("li").eq(stt).addClass('active');
+		hideImg();
   });
   	$("#img_3").click(function(){
 		stt= startImg+2;
-		$("img").hide();
-		$("img").eq(stt).show();
-		$("li").removeClass('active');
-		$("li").eq(stt).addClass('active');
+		hideImg();
   });
   	$("#img_4").click(function(){
 		stt= startImg+3;
-		$("img").hide();
-		$("img").eq(stt).show();
-		$("li").removeClass('active');
-		$("li").eq(stt).addClass('active');
+		hideImg();
   });
   	$("#img_5").click(function(){
 		if(	stt= endImg)       // if stt =4, next stt =0
 			stt = (startImg-1);
-		$("img").hide();
-		$("img").eq(stt).show();
-		$("li").removeClass('active');
-		$("li").eq(stt).addClass('active');
+		hideImg();
   });
   // auto motion image
 	setInterval(function(){
