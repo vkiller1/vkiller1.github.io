@@ -429,7 +429,7 @@ $("#backgroundGame").click(function() {
 	}
 });
 $("#boomGame").click(function(){
-	if(boomGame > 0) {
+	if(boomGame == 4) {
 		boomGame--;
 		updateBoom();
 		killMonster();
