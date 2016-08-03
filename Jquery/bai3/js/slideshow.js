@@ -7,7 +7,6 @@
 			stt = parseInt(($(this).attr("stt")));
 		}
 	});
-	
 	function hideImg(){
 		$("img").hide();
 		$("img").eq(stt).show();
@@ -44,24 +43,24 @@
 		}
 		stt= startImg;
 		hideImg();
-  });
+  	});
   	$("#img_2").click(function(){
 		stt= startImg+1;
 		hideImg();
-  });
+	});
   	$("#img_3").click(function(){
 		stt= startImg+2;
 		hideImg();
-  });
+	});
   	$("#img_4").click(function(){
 		stt= startImg+3;
 		hideImg();
-  });
+  	});
   	$("#img_5").click(function(){
 		if(	stt= endImg)       // if stt =4, next stt =0
 			stt = (startImg-1);
 		hideImg();
-  });
+  	});
   // auto motion image
 	setInterval(function(){
 		$("#next").click();
