@@ -8,11 +8,9 @@ $(document).ready(function(){
 	var boomGame = 3;
 	var blood_number = 0;
 	var level= 1;
-	
 	const PAUSE = "Pause Game";
 	const GAMEOVER = "Game Over";
 	const srcBlood = "images/blood.png";
-	
 // save storge the highscore
 	if(sessionStorage.getItem("highScore") == null) {
 		sessionStorage.setItem("highScore",0);
@@ -20,7 +18,6 @@ $(document).ready(function(){
 		highScore = sessionStorage.getItem("highScore");
 	}
 // get motion animation
-
 	var monster1 = {  startX: 0, startY: 0, stopX: 200, stopY: 200 };
 	var monster2 = {  startX: 200, startY: 0, stopX: 300, stopY: 200 };
 	var monster3 = {  startX: 300, startY: 0, stopX: 400, stopY: 200 };
@@ -29,7 +26,6 @@ $(document).ready(function(){
 	var monster6 = {  startX: 0,startY: 400, stopX: 200,stopY: 400 };
 	var monster7 = {  startX: 200, startY: 400, stopX: 200, stopY: 300 };
 	var monster8 = {  startX: 400, startY: 400, stopX: 300, stopY: 300 };
-
 	var monst1 = $("#monst1");
 	var monst2 = $("#monst2");
 	var monst3 = $("#monst3");
@@ -38,7 +34,6 @@ $(document).ready(function(){
 	var monst6 = $("#monst6");
 	var monst7 = $("#monst7");
 	var monst8 = $("#monst8");
-
 function clickMonster(monster) {
 	if(run) {
 		monster.finish();
@@ -248,7 +243,6 @@ function setBlood(x, y) {
 
 	}
 }
-
 function startAllMonster(){
 	setStart(monst1,monster1);
 	setStart(monst2,monster2);
@@ -427,7 +421,6 @@ $("#pauseGame").click(function(){
 $("#resetGame").click(function(){
 	restart();
 });
-
 $("#backgroundGame").click(function() {
 	if(run) {
 		star_number--;
@@ -435,7 +428,6 @@ $("#backgroundGame").click(function() {
 		updateStar();
 	}
 });
-
 $("#boomGame").click(function(){
 	if(boomGame > 0) {
 		boomGame--;
@@ -443,9 +435,7 @@ $("#boomGame").click(function(){
 		killMonster();
 	}
 });
-
 var offset = $("#backgroundGame").offset();
-
 monst1.click(function(e) {
 	clickMonster(monst1);
 	var locaX = e.pageX - offset.left;
@@ -494,9 +484,7 @@ monst8.click(function(e) {
 	var locaY = e.pageY - offset.top;	
 	setBlood(locaX, locaY);
 });
-
 updateHighScore();
 startAllMonster();
 motionMonster(monst1, monster1);
-
 });
