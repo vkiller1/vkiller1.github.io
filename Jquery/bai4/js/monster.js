@@ -92,12 +92,6 @@ function updateStar() {
 		end = true;		
 	}
 }
-$("#boomGame").click (function(){
-	if(boomGame>0)
-		boomGame--;
-		updateBoom();
-		killMonster();
-});
 function stopMonster() {
 	if(monst1.is(":visible")) {
 		monst1.pause();
