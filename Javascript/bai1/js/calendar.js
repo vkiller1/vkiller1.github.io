@@ -134,7 +134,7 @@ function show() {
 	while(d.getMonth() == month) {
 		
 		if(d.getDate() == dayCurrent.getDate() && month == dayCurrent.getMonth() && year == dayCurrent.getFullYear()) {
-			table.push('<td class= "date"  onclick="getDate(' + d.getDate() + ')">' + d.getDate() + '</td>');
+			table.push('<td class= "date"  style="background-color: red;" onclick="getDate(' + d.getDate() + ')">' + d.getDate() + '</td>');
 		} else {
 
 			table.push('<td class= "date"  onclick="getDate(' + d.getDate() + ')">' + d.getDate() + '</td>');
