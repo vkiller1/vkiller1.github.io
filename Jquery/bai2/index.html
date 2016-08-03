@@ -17,41 +17,42 @@
 </script>
 </head>
 <body>
-<div id="mainform">
-	<div class="innerdiv">
-		<form action='#' id="myForm" method='post' name="myForm">
+	<div id="mainform">
+		<div class="innerdiv">
+<!-- Required Div Starts Here -->
+		<h2>Form Validation Using AJAX</h2>
+		<form id="myForm" method='post' name="myForm">
 		<h3>Fill Your Information!</h3>
 		<table>
-		<tr>
-		<td>Username</td>
-		<td><input id='username1' name='username' onblur="validate('username', this.value)" type='text'></td>
-		<td>
-		<div id='username'></div>
-		</td>
-		</tr>
-		<tr>
-		<td>Password</td>
-		<td><input id='password1' name='password' onblur="validate('password', this.value)" type='password'></td>
-		<td>
-		<div id='password'></div>
-		</td>
-		</tr>
-		<tr>
-		<td>Email</td>
-		<td><input id='email1' name='email' onblur="validate('email', this.value)" type='text'></td>
-		<td>
-		<div id='email'></div>
-		</td>
-		</tr>
-		<tr>
-		<td>birthday</td>
-		<td><input id='birthday1' name='birthday' onblur="validate('birthday', this.value)" type='text'></td>
-		<td>
-		<div id='birthday'></div>
-		</td>
-		</tr>
+			<tr>
+				<td>Username</td>
+				<td><input id='username1' name='username' onblur="validateUsername('username', this.value)" type='text'></td>
+				<td>
+					<div id='errorUser'></div>
+				</td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input id='password1' name='password' onblur="validatePassword('password', this.value)" type='password'></td>
+				<td>
+					<div id='errorPassword'></div>
+				</td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input id='email1' name='email' onblur="validateEmail('email', this.value)" type='textEmail'></td>
+				<td>
+					<div id='errorEmail'></div>
+				</td>
+			</tr>
+			<tr>
+				<td>birthday</td>
+				<td><input readonly id='birthday1' name='birthday'  type='textBirthday'></td>
+				<td></td>
+			</tr>
 		</table>
-	<input onclick="checkForm()" type='button' value='Submit'>
+		<input type="button" name="submit_form"  value="Submit"  onclick="submitAjax();">
+		<input type="button" name="reset_form" value="Reset" onclick="this.form.reset();">
 </form>
 </div>
 </body>
