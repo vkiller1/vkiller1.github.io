@@ -72,6 +72,7 @@ div.menu_footer_2 ul li{
 	margin:2px 0 2px 8px
 	}	
 div.menu_footer_1 {
+	float: none;
     padding: 20px 0 16px 20px;
 }		
 div.menu_footer_2{
@@ -734,9 +735,12 @@ p.text_right_depilation
 	float: none;
 	width: 120%;
 }
+#content_h22 p{
+	margin-bottom: 15px;
+}
 #content_2_1 {
     float: none;
-    margin-bottom: 70px;
+    margin-bottom: 10%;
 }
 #content_2_1 span {
 	margin-left: -8px;
@@ -768,7 +772,7 @@ p.text_right_depilation
 #contentFacial_1 {
 	width: 100% ;
 	float:none;
-	margin-left: -110px;
+	margin-left: -21%;
 }
 .contentFacial_2 {
 	float: none;
@@ -776,6 +780,7 @@ p.text_right_depilation
 }
 .imgFacial {
 	float: none;
+	margin-left: 15%;
 }
 .ctFacial {
 	float: none;
@@ -784,12 +789,13 @@ p.text_right_depilation
 }
 .ctFacial p{
 	width: 100%;
+	margin-left: 15%;
 }
 .imgBottom {
 	margin-left: 50%;
 }
 .imgBottomIntro {
-	margin-left: 50%;
+	margin-left: 70%;
 }
 #imgBottomFacial {
 	margin-left: 2%;
@@ -858,7 +864,7 @@ p.text_right_depilation
 #ctBihda{
 	float: none;
 	margin-right: 30px;
-	width: 350px;	
+	width: 95%;	
 }
 #textBihda {
 }
@@ -886,23 +892,28 @@ p.text_right_depilation
 	float: none;
 	margin:auto;
 }
-#contentBihda_2 {
+.contentBihda_2 {
 	height: 100%;
 }
+.contentBihda_2 img{
+	width: 30%;
+	height: 30%;
+}
 #contentBihda_1 {
-	margin-left: 20px;
-	margin-bottom: 40px;
+	width: 98%;
+	margin-left: 3%;
+	margin-bottom: 10%;
 }
 .img_next {
 	float: none;
 	width: 5%;
 	height: 5%;
 	clear: both;
-	margin-bottom: 50px;
+	margin-bottom: 2%;
 }
 #imgcontentBihda {
 	height: 40%;
-	padding-bottom: 30px;
+	padding-bottom: 20%;
 }
 .img_bihda1 {
 	margin: center;
@@ -924,7 +935,14 @@ p.text_right_depilation
 }
 #imgHeadBihda {
 	float: none;
-	margin-top: 700px;
+	margin-top: 80%;
+
+}
+#imgHeadBihda img{
+	margin-top: 10%;
+	width: 22%;
+	height: 8%;
+	margin-right: 1%;
 }
 .ctActy{
 	width: 60%;
@@ -958,6 +976,7 @@ p.text_right_depilation
 }
 #contentActy2 img {
 	width: 100%;
+	margin-left: 10%;
 }
 #contentActy3{
 	width: 103%;
@@ -1007,8 +1026,11 @@ p.text_right_depilation
 .textHair {
 	font-size: 60%;
 }
-#contentCase1{
-	width: 12%;
+.contentCase1{
+	width: 100%;
+}
+.contentCase1 p{
+	margin-left: 5%;
 }
 .content2{
 	width: 60%;
@@ -1016,14 +1038,23 @@ p.text_right_depilation
 }
 .leftImgCase {
 	float: none;
+	width: 140%;
 }
 #imgHeadCase {
 	float: none;
-	margin-left: 270px;
+	margin-top: 10%;
+	margin-left:50%;
+}
+#imgHeadCase img{
+	margin-top: 10%;
+	margin-right: 100%;
 }
 .imgContent2{
 	width: 60%;
 	height: 60%;
+}
+.imgContent2 img{
+	margin-left: 5%;
 }
 #imgContentQA {
 	float: none;
@@ -1125,5 +1156,8 @@ p.text_right_depilation
 }
 body{
 	width: auto;
+}
+.new1{
+	margin-top: 10%;
 }
 }

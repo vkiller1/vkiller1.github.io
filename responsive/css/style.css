@@ -2178,7 +2178,8 @@ h4.margin_top_depilation
 	float: right;
 	margin-right: 30px;
 	text-align: left;
-	width: 350px;	
+	max-width: 350px;	
+	width: 100%;
 }
 .textBihda {
 	font-weight: bold;
@@ -2202,34 +2203,32 @@ h4.margin_top_depilation
 .img_bihda1 {
 	max-width: 290px;
 	max-height: 200px;
-	width: 100%
+	width: 100%;
 	height:100%;
 	float: left;
 }
 .img_bihda2 {
 	max-width: 290px;
 	max-height: 200px;
-	width: 100%
+	width: 100%;
 	height:100%;	
-	background: url("../images/bihda/img_03.jpg") no-repeat;
-	float: left;
 }
 .img_next {
 	max-width: 80px;
 	max-height: 73px;
-	width: 100%
+	width: 100%;
 	height:100%;
-	margin-top: 55px;
-	float: left;
+	margin-bottom: 60px;
 }
 .contentBihda_2 {
+	display: inline-block;
 	max-height: 300px;
 	height: 100%;
 }
 .imgcontentBihda {
 	display: inline-block;
 	max-width: 269px;
-	width: 269px;
+	width: 100%;
 	max-height: 230px;
 	height: 100%;
 }
@@ -2240,7 +2239,7 @@ h4.margin_top_depilation
 	width: 100%;
 	height: 100%;
 	margin-left: 640px;
-	margin-top: 400px;
+	margin-top: 50px;
 }
 #imgHeadBihda {
 	float: right;
@@ -2364,13 +2363,26 @@ h4.margin_top_depilation
 	background-size: 300px;
 	margin-bottom: 20px;
 	float: left;
-	margin-right: 20px;
+	margin-right: 10px;
+}
+.rightImgCase {
+	background-size: 300px;
+	margin-bottom: 20px;
+	float: right;	
 }
 #imgHeadCase {
+	display: inline-block;
 	float: right;
-	margin-left: 500px;
+	max-width: 10px;
+	margin-right:100px;
 	margin-top: 60px;
-} /* >>>>>>>>>>>>>>>>>>> */
+}
+#imgHeadQA {
+	display: inline-block;
+	float: right;
+	max-width: 10px;
+	margin-right:100px;
+}
 #imgContentQA {
 	margin-bottom: 20px;
 	float: left;
@@ -2378,10 +2390,12 @@ h4.margin_top_depilation
 	margin-left: 25px;
 }
 .imgContent2{
-	max-width: 403px;
+	display: inline-block;
+	max-width: 670px;
 	width: 100%;
 	max-height: 1190px;
 	height: 100%;
+	float: left;
 }
 .contentQA {
 	display: inline-block;
@@ -2454,6 +2468,13 @@ h4.margin_top_depilation
 	width: 100%;
 	max-height: 400px;
 	height: 100%;
+}
+#imgHeadReruit {
+	display: inline-block;
+	float: right;
+	max-width: 10px;
+	margin-right:70px;
+	margin-top: 60px;
 }
 #contentRecuit1 {
 	margin-left: 20px;
